@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Description</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="description.css">
+</head>
+<body>
+
+<div class="card description-card bg-dark text-white">
+    <div class="card-header">
+        <h5 class="card-title text-center">Description</h5>
+        <div class="progress">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Step 4</div>
+        </div>
+    </div>
+    <div class="card-body">
+        <form id="descriptionForm" method="post" action="php/description.php">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="male" value="male" checked>
+                <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                <label class="form-check-label" for="female">Female</label>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" class="form-control" id="age" name="age" placeholder="Enter your age:" required>
+            </div>
+            <div class="form-group">
+                <label for="height">Height (cm)</label>
+                <input type="number" class="form-control" id="height" name="height" placeholder="Enter your height:" required>
+            </div>
+            <div class="form-group">
+                <label for="weight">Weight (kg)</label>
+                <input type="number" class="form-control" id="weight" name="weight" placeholder="Enter your weight:" required>
+            </div>
+            <div class="form-group">
+                <label for="goal_weight">Goal Weight (kg)</label>
+                <input type="number" class="form-control" id="goalWeight" name="goal_weight" placeholder="Enter your goal weight:" required>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="weekly" id="nedeljno1" onchange="checkNextButton()">
+                <label class="kg" for="nedeljno1">
+                    0.25kg/week (recommended)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="weekly" id="nedeljno2" onchange="checkNextButton()">
+                <label class="kg" for="nedeljno2">
+                    0.5kg/week
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="weekly" id="nedeljno3" onchange="checkNextButton()">
+                <label class="kg" for="nedeljno3">
+                    1kg/week
+                </label>
+            </div>
+
+            <!-- Dugme "Next" koje vodi na sledeću stranicu -->
+            <div class="text-center">
+                <button type="button" class="btn btn-primary button1" id="nextButton" onclick="redirectToNextQuestion()" disabled>Create account</button>
+            </div>
+
+            <script>
+                function checkFields() {
+                    var height = document.getElementById('height').value;
+                    var weight = document.getElementById('weight').value;
+                    var goalWeight = document.getElementById('goalWeight').value;
+                    var age = document.getElementById('age').value;
+
+                    return height && weight && goalWeight && age;
+                }
+
+                // Funkcija koja proverava da li je izabran barem jedan radio button
+                function checkNextButton() {
+                    var nedeljno1 = document.getElementById('nedeljno1').checked;
+                    var nedeljno2 = document.getElementById('nedeljno2').checked;
+                    var nedeljno3 = document.getElementById('nedeljno3').checked;
+
+                    // Onemogućava dugme "Next" ako nijedan radio button nije izabran
+                    document.getElementById('nextButton').disabled = !(nedeljno1 || nedeljno2 || nedeljno3);
+                }
+
+                function redirectToNextQuestion() {
+                    var selectedGender = document.querySelector('input[name="gender"]:checked').value;
+                    var selectedWeeklyOption;
+
+                    // Proverava koji radio button za sedmičnu opciju je izabran
+                    if (document.getElementById('nedeljno1').checked) {
+                        selectedWeeklyOption = document.getElementById('nedeljno1').value;
+                    } else if (document.getElementById('nedeljno2').checked) {
+                        selectedWeeklyOption = document.getElementById('nedeljno2').value;
+                    } else if (document.getElementById('nedeljno3').checked) {
+                        selectedWeeklyOption = document.getElementById('nedeljno3').value;
+                    }
+
+                    // Čuva vrednosti u localStorage pod odgovarajućim ključevima
+                    localStorage.setItem('gender', selectedGender);
+                    localStorage.setItem('age', document.getElementById('age').value);
+                    localStorage.setItem('weight', document.getElementById('weight').value);
+                    localStorage.setItem('height', document.getElementById('height').value);
+                    localStorage.setItem('goal_weight', document.getElementById('goalWeight').value);
+                    localStorage.setItem('weeklyOption', selectedWeeklyOption);
+
+
+                    var allFieldsFilled = checkFields();  // Provera da li su sva polja popunjena
+                    if (allFieldsFilled) {
+                        window.location.href = "calculation.html";
+                    }
+                }
+
+                // Ovo osigurava da se dugme Next onemogući ako nisu sva polja popunjena
+                document.getElementById('height').addEventListener('input', function() {
+                    document.getElementById('nextButton').disabled = !checkFields();
+                });
+                document.getElementById('weight').addEventListener('input', function() {
+                    document.getElementById('nextButton').disabled = !checkFields();
+                });
+                document.getElementById('goalWeight').addEventListener('input', function() {
+                    document.getElementById('nextButton').disabled = !checkFields();
+                });
+                document.getElementById('age').addEventListener('input', function() {
+                    document.getElementById('nextButton').disabled = !checkFields();
+                });
+                document.getElementById('nedeljno1').addEventListener('input', function() {
+                    document.getElementById('nextButton').disabled = !checkFields();
+                });
+                document.getElementById('nedeljno2').addEventListener('input', function() {
+                    document.getElementById('nextButton').disabled = !checkFields();
+                });
+                document.getElementById('nedeljno3').addEventListener('input', function() {
+                    document.getElementById('nextButton').disabled = !checkFields();
+                });
+            </script>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

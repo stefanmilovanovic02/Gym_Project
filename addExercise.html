@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berserk Gym - Exercise</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="addExercise.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand mr-auto" href="#">
+            <img src="slike/logo1.png" alt="Logo">
+        </a>
+        <div class="navbar-nav ml-auto">
+            <a class="nav-link" href="app.html">Home</a>
+            <a class="nav-link" href="supplements.html">Supplements</a>
+            <a class="nav-link" href="food.html">Food</a>
+            <a class="nav-link" href="Exercise.html">Exercise</a>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Glavni card-body (sa vezbama) -->
+            <div class="col-md-8">
+                <div class="card routine-card bg-dark text-white">
+                    <div class="card-header">
+                        <h5 class="card-title text-center">Exercises</h5>
+                    </div>
+                    <div class="card-body">
+            <div class="container mt-4">
+                <!-- Search bar -->
+                <div id="searchDropdownContainer" class="row mb-3">
+                    <div class="col-md-10">
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search exercise...">
+                    </div>
+        
+                     <!-- Dropdown  bar -->
+                    <div class="col-md-2">
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle show" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true"><span class="ime">Categories</span></a>
+                            <div class="dropdown-menu" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 44px);" data-popper-placement="bottom-start">
+                                <a class="dropdown-item" href="#" data-category="all">All</a>
+                                <a class="dropdown-item" href="#" data-category="chest">Chest</a>
+                                <a class="dropdown-item" href="#" data-category="back">Back</a>
+                                <a class="dropdown-item" href="#" data-category="shoulders">Shoulders</a>
+                                <a class="dropdown-item" href="#" data-category="biceps">Biceps</a>
+                                <a class="dropdown-item" href="#" data-category="triceps">Triceps</a>
+                                <a class="dropdown-item" href="#" data-category="legs">Legs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                      
+                <div class="row tabla">
+                    <!-- Grid sa vezbama -->
+                    <div class="col-md-4 mb-4 proizvod" data-category="chest">
+                        <div class="exercise-item">
+                            <img src="slike/benchpress.jpg" class="img-fluid" alt="Bench Press">
+                            <h5>Bench Press</h5>
+                            <p class="description">Chest and Triceps</p>
+                            <button class="btn btn-primary button1">Add exercise</button>
+                            <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                        </div>
+                        <!-- Modal -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <!-- Slika vezbe -->
+                                            <img src="" class="img-fluid" alt="Exercise Image" id="modalExerciseImage">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <!-- Informacije o proizvodu -->
+                                            <h5 id="modalExerciseName"></h5>
+                    
+                                            <button class="btn btn-primary button1">Add exercise</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                    <div class="col-md-4 mb-4 proizvod" data-category="chest">
+                        <div class="exercise-item">
+                            <img src="slike/chestpress.jpg" class="img-fluid" alt="Chest Press">
+                            <h5>Chest Press</h5>
+                            <p class="description">Chest and Triceps</p>
+                            <button class="btn btn-primary button1">Add exercise</button>
+                            <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4 mb-4 proizvod" data-category="chest">
+                        <div class="exercise-item">
+                            <img src="slike/inclinebench.jpg" class="img-fluid" alt="Incline Bench">
+                            <h5>Incline Bench Press</h5>
+                            <p class="description">Chest and Triceps</p>
+                            <button class="btn btn-primary button1">Add exercise</button>
+                            <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4 mb-4 proizvod" data-category="back">
+                        <div class="exercise-item">
+                            <img src="slike/latpulldown.jpg" class="img-fluid" alt="Lat Pulldown">
+                            <h5>Lat Pulldown</h5>
+                            <p class="description">Back and biceps</p>
+                            <button class="btn btn-primary button1">Add exercise</button>
+                            <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4 mb-4 proizvod" data-category="back">
+                        <div class="exercise-item">
+                            <img src="slike/closegriplat.jpg" class="img-fluid" alt="Close Grip">
+                            <h5>Close Grip Lat Pulldown</h5>
+                            <p class="description">Back and biceps</p>
+                            <button class="btn btn-primary button1">Add exercise</button>
+                            <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4 mb-4 proizvod" data-category="back">
+                        <div class="exercise-item">
+                            <img src="slike/seatedcablerow.jpg" class="img-fluid" alt="Seated Cable Row">
+                            <h5>Seated Cable Row</h5>
+                            <p class="description">Back and biceps</p>
+                            <button class="btn btn-primary button1">Add exercise</button>
+                            <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4 mb-4 proizvod" data-category="shoulders">
+                        <div class="exercise-item">
+                            <img src="slike/dumbbelllateralraise.jpg" class="img-fluid" alt="Dumbbell Lateral Raise">
+                            <h5>Dumbbell Lateral Raise</h5>
+                            <p class="description">Shoulders</p>
+                            <button class="btn btn-primary button1">Add exercise</button>
+                            <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4 mb-4 proizvod" data-category="shoulders">
+                        <div class="exercise-item">
+                            <img src="slike/seateddumbbellshoulderpress.jpg" class="img-fluid" alt="Seated Dumbbell Shoulder Press">
+                            <h5>Seated Dumbbell Shoulder Press</h5>
+                            <p class="description">Shoulder</p>
+                            <button class="btn btn-primary button1">Add exercise</button>
+                            <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4 mb-4 proizvod" data-category="shoulders">
+                        <div class="exercise-item">
+                            <img src="slike/machinelateralraise.jpg" class="img-fluid" alt="Machine Lateral Raise">
+                            <h5>Machine Lateral Raise</h5>
+                            <p class="description">Machine Lateral Raise</p>
+                            <button class="btn btn-primary button1">Add exercise</button>
+                            <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    
+     <!-- Drugi card-body (desna strana) -->
+     <div class="col-md-4">
+        <div class="card routine-card-right bg-dark text-white">
+            <div class="card-header">
+                <h5 class="card-title text-center">Selected Exercises</h5>
+            </div>
+            <div class="card-body">
+
+                <!-- Label za naziv rutine -->
+                <div class="row mb-3">
+                    <div class="col-md-12 text-center">
+                           <input type="text" id="routineName" class="form-control" placeholder="Enter routine name...">
+                   </div>
+                </div>
+
+                <ul id="selectedExercisesList">
+                    <!-- Ovde će se dinamički dodavati izabrane vežbe -->
+                </ul>
+
+                <!-- Dugme koje vodi na stranicu za dodavanje vezbi -->
+            <button type="button" class="btn btn-primary button3" onclick="redirectToAddPage()">Log workout</button>
+
+                <script>
+        
+                function redirectToAddPage() {
+                    window.location.href = "Exercise.html";
+                }
+            </script>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+    <script src="jquery.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="addExercise.js"></script>
+    <script>
+    
+        $(document).ready(function () {
+            // Postavi event handler za klik na kategorije u dropdown-u
+            $('.dropdown-item').on('click', function () {
+                // Sakrij sve proizvode
+                $('.proizvod').hide();
+                
+                // Prikazi proizvode samo za izabranu kategoriju
+                var selectedCategory = $(this).data('category');
+                if (selectedCategory === 'all') {
+                    $('.proizvod').show();
+                } else {
+                    $('.proizvod[data-category="' + selectedCategory + '"]').show();
+                }
+            });
+
+            // Postavi event handler za unos teksta u polje za pretragu
+            $('#searchInput').on('input', function () {
+                var searchText = $(this).val().toLowerCase();
+                $('.proizvod').hide();
+                $('.proizvod:contains("' + searchText + '")').show();
+            });
+        });
+       
+    
+    </script>
+</body>
+</html>

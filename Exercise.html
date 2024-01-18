@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berserk Gym - Exercise</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="exercise.css">
+    <script src="jquery.js"></script>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand mr-auto" href="#">
+            <img src="slike/logo1.png" alt="Logo">
+        </a>
+        <div class="navbar-nav ml-auto">
+            <a class="nav-link" href="app.html">Home</a>
+            <a class="nav-link" href="supplements.html">Supplements</a>
+            <a class="nav-link" href="food.html">Food</a>
+            <a class="nav-link" href="Exercise.html">Exercise</a>
+        </div>
+    </nav>
+
+    <div class="card exercise-card bg-dark text-white">
+        <div class="card-header">
+            <h3 class="card-title text-center">My Routines</h3>
+        </div>
+        <div class="card-body">
+            <!-- Ovde će se prikazivati rutine -->
+            <div class="routine-list" id="routineList">
+                <!-- Rutine će se dinamički dodavati ovde -->
+            </div>
+            <!-- Dugme koje vodi na stranicu za dodavanje vezbi -->
+            <button type="button" class="btn btn-primary button1" onclick="redirectToAddPage()">Build Routine</button>
+        </div>
+    </div>
+    <script>
+        
+        function redirectToAddPage() {
+            window.location.href = "addExercise.html";
+        }
+    </script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="Exercise.js"></script>
+</body>
+</html>

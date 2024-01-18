@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="activity.css">
+    
+</head>
+<body>
+
+<div class="card activity-card bg-dark text-white">
+    <div class="card-header">
+        <h5 class="card-title text-center">Activity</h5>
+        <div class="progress">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Step 3</div>
+        </div>
+    </div>
+    <div class="card-body">
+        <form id="activityForm" method="post" action="php/activity.php">
+            <div class="form-check custom-checkbox">
+                <input class="form-check-input" type="radio" name="activityOption" id="activityOption1" onchange="checkNextButton()" value="Not very active">
+                <label class="form-check-label" for="activityOption1">
+                    Not very active
+                </label>
+            </div>
+            <div class="form-check custom-checkbox">
+                <input class="form-check-input" type="radio" name="activityOption" id="activityOption2" onchange="checkNextButton()" value="Lightly active">
+                <label class="form-check-label" for="activityOption2">
+                    Lightly active
+                </label>
+            </div>
+            <div class="form-check custom-checkbox">
+                <input class="form-check-input" type="radio" name="activityOption" id="activityOption3" onchange="checkNextButton()" value="Active">
+                <label class="form-check-label" for="activityOption3">
+                    Active
+                </label>
+            </div>
+            <div class="form-check custom-checkbox">
+                <input class="form-check-input" type="radio" name="activityOption" id="activityOption4" onchange="checkNextButton()" value="Very active">
+                <label class="form-check-label" for="activityOption4">
+                    Very active
+                </label>
+            </div>
+
+            <!-- Dugme "Next" koje vodi na sledeću stranicu -->
+            <button type="button" class="btn btn-primary button1" id="nextButton" onclick="redirectToNextQuestion()" disabled>Next</button>
+
+            <script>
+                // Funkcija koja proverava da li je izabran barem jedan radio button
+                function checkNextButton() {
+                    var activityOption1 = document.getElementById('activityOption1').checked;
+                    var activityOption2 = document.getElementById('activityOption2').checked;
+                    var activityOption3 = document.getElementById('activityOption3').checked;
+                    var activityOption4 = document.getElementById('activityOption4').checked;
+
+                    // Onemogućava dugme "Next" ako nijedan radio button nije izabran
+                    document.getElementById('nextButton').disabled = !(activityOption1 || activityOption2 || activityOption3 || activityOption4);
+                }
+
+                function redirectToNextQuestion() {
+                    var selectedActivity;
+
+                    // Proverava koji radio button je izabran
+                    if (document.getElementById('activityOption1').checked) {
+                        selectedActivity = document.getElementById('activityOption1').value;
+                    } else if (document.getElementById('activityOption2').checked) {
+                        selectedActivity = document.getElementById('activityOption2').value;
+                    } else if (document.getElementById('activityOption3').checked) {
+                        selectedActivity = document.getElementById('activityOption3').value;
+                    } else if (document.getElementById('activityOption4').checked) {
+                        selectedActivity = document.getElementById('activityOption4').value;
+                    }
+
+                    // Čuva izabrani nivo aktivnosti u localStorage
+                    localStorage.setItem('activity', selectedActivity);
+                    
+
+                    var progressBar = document.querySelector('.progress-bar');
+                    progressBar.style.width = '100%';
+
+                    window.location.href = "description.html";
+                }
+            </script>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+body {
+    min-height: 70vh;
+    background-image: url(slike/Background.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.main-card {
+    max-width: 400px;
+    margin: 250px auto;
+}
+
+.card-title{
+    margin-bottom: 20px;
+}
+
+.progress-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #525151;
+    position: relative;
+    margin: auto;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress-circle::before {
+    content: '';
+    position: absolute;
+    top: 6px; 
+    left: 6px;
+    right: 6px;
+    bottom: 6px; 
+    background-color: #212529;
+    border-radius: 50%;
+}
+
+.progress-circle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+}
+
+/* Promeni boju progres bar-a kada se unese hrana */
+.food-entered .progress-circle::before {
+    background-color: #28a745; /* Zelena boja (primer) */
+}
+
+/* Prikaz broja kalorija kada se unese hrana */
+.food-entered .progress-circle-text::before {
+    content: '2500'; /* Broj kalorija (primer) */
+}
+
+
+.button1{
+    
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px; 
+    padding-right: 30px;
+}
+
+.button1:hover {
+    background-color: #535b63;
+    border-color: #ffffff;
+}

@@ -1,0 +1,50 @@
+body {
+    margin-top: 200px;
+    background-image: url(slike/Background.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.description-card {
+   
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+
+.form-group{
+    margin-top: 10px;
+}
+
+
+#activityOption1,
+#activityOption2,
+#activityOption3 {
+    
+    margin-top: 10px;
+}
+
+.kg{ 
+    margin-top: 5px;
+}
+
+
+
+.button1{
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: auto;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px; 
+    padding-right: 30px;
+    
+}
+

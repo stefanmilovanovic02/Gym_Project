@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berserk Gym</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="supplements.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand mr-auto" href="#">
+            <img src="slike/logo1.png" alt="Logo">
+        </a>
+        <div class="navbar-nav ml-auto">
+            <a class="nav-link" href="app.html">Home</a>
+            <a class="nav-link" href="supplements.html">Supplements</a>
+            <a class="nav-link" href="food.html">Food</a>
+            <a class="nav-link" href="Exercise.html">Exercise</a>
+            <!-- ikonica za korpu -->
+            
+            <a class="nav-link" href="cart.html" id="cartLink">
+                <img src="slike/kolica.png" alt="Shopping Cart Icon">
+                <span id="cartTotal">0</span> 
+            </a>
+            
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- Search bar -->
+        <div id="searchDropdownContainer" class="row mb-3">
+            <div class="col-md-10">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search supplements...">
+            </div>
+
+             <!-- Dropdown  bar -->
+            <div class="col-md-2">
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle show" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true"><span class="ime">Categories</span></a>
+                    <div class="dropdown-menu" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 44px);" data-popper-placement="bottom-start">
+                        <a class="dropdown-item" href="#" data-category="all">All</a>
+                        <a class="dropdown-item" href="#" data-category="protein">Protein</a>
+                        <a class="dropdown-item" href="#" data-category="creatine">Creatine</a>
+                        <a class="dropdown-item" href="#" data-category="equipment">Equipment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="row tabla">
+            <!-- Grid sa suplementima -->
+            <div class="col-md-4 mb-4 proizvod" data-category="protein">
+                <div class="supplement-item">
+                    <img src="slike/ProteinJagoda.png" class="img-fluid" alt="Supplement 1">
+                    <h5>7 NUTRITION WHEY PROTEIN 80 2000gr Strawberry</h5>
+                    <p class="price" data-price="10">Price: $10</p>
+                    <button class="btn btn-primary button1" onclick="addToCart(10, '7 NUTRITION WHEY PROTEIN 80 2000gr Strawberry', 'Strawberry', 'slike/ProteinJagoda.png')">Add to Cart</button>
+                    <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                </div>
+                <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!-- Slika proizvoda -->
+                                    <img src="" class="img-fluid" alt="Supplement Image" id="modalSupplementImage">
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- Informacije o proizvodu -->
+                                    <h5 id="modalSupplementName"></h5>
+                                    <p><strong>Proizvođač:</strong> <span id="modalManufacturer"></span></p>
+                                    <p><strong>Cena:</strong> $<span id="modalPrice"></span></p>
+                                    <div class="form-group">
+                                        <label for="quantity">Količina:</label>
+                                        <input type="number" class="form-control" id="quantity" value="1">
+                                    </div>
+                                    <button class="btn btn-primary button1" onclick="addToCart(10, '7 NUTRITION WHEY PROTEIN 80 2000gr Strawberry', 'Strawberry', 'slike/ProteinJagoda.png')">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+    
+        </div>
+    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4 proizvod" data-category="protein">
+                <div class="supplement-item">
+                    <img src="slike/ProteinVanila.jpg" class="img-fluid" alt="Supplement 2">
+                    <h5>7 NUTRITION WHEY PROTEIN 80 2000gr Vanilla</h5>
+                    <p class="price" data-price="10">Price: $10</p>
+                    <button class="btn btn-primary button1" onclick="addToCart(10, '7 NUTRITION WHEY PROTEIN 80 2000gr Vanilla', 'Vanilla', 'slike/ProteinVanila.jpg')">Add to Cart</button>
+                    <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4 proizvod" data-category="protein">
+                <div class="supplement-item">
+                    <img src="slike/ProteinCokolada.jpg" class="img-fluid" alt="Supplement 3">
+                    <h5>7 NUTRITION WHEY PROTEIN 80 2000gr Chocolate</h5>
+                    <p class="price" data-price="10">Price: $10</p>
+                    <button class="btn btn-primary button1" onclick="addToCart(10, '7 NUTRITION WHEY PROTEIN 80 2000gr Chocolate', 'Chocolate', 'slike/ProteinCokolada.jpg')">Add to Cart</button>
+                    <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4 proizvod" data-category="creatine">
+                <div class="supplement-item">
+                    <img src="slike/Kreatin1.png" class="img-fluid" alt="Supplement 4">
+                    <h5>7 NUTRITION Creatine Monohydrate 500gr</h5>
+                    <p class="price" data-price="40">Price: $40</p>
+                    <button class="btn btn-primary button1" onclick="addToCart(40, '7 NUTRITION Creatine Monohydrate 500gr', 'N/A', 'slike/Kreatin1.png')">Add to Cart</button>
+                    <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4 proizvod" data-category="creatine">
+                <div class="supplement-item">
+                    <img src="slike/Kreatin2.jpg" class="img-fluid" alt="Supplement 5">
+                    <h5>MXM Kreatin Monohidrat 500gr</h5>
+                    <p class="price" data-price="32">Price: $32</p>
+                    <button class="btn btn-primary button1" onclick="addToCart(32, 'MXM Kreatin Monohidrat 500gr', 'N/A', 'slike/Kreatin2.jpg')">Add to Cart</button>
+                    <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4 proizvod" data-category="creatine">
+                <div class="supplement-item">
+                    <img src="slike/Kreatin3.png" class="img-fluid" alt="Supplement 6">
+                    <h5>BASIC CREA PRO 500GR</h5>
+                    <p class="price" data-price="32">Price: $32</p>
+                    <button class="btn btn-primary button1" onclick="addToCart(32, 'BASIC CREA PRO 500GR', 'N/A', 'slike/Kreatin3.png')">Add to Cart</button>
+                    <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4 proizvod" data-category="equipment">
+                <div class="supplement-item">
+                    <img src="slike/Gurtne1.jpg" class="img-fluid" alt="Supplement 7">
+                    <h5>OLYMPIA NATION Gurtne</h5>
+                    <p class="price" data-price="6">Price: $6</p>
+                    <button class="btn btn-primary button1" onclick="addToCart(6, 'OLYMPIA NATION Gurtne', 'N/A', 'slike/Gurtne1.jpg')">Add to Cart</button>
+                    <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4 proizvod" data-category="equipment">
+                <div class="supplement-item">
+                    <img src="slike/Steznici1.jpg" class="img-fluid" alt="Supplement 8">
+                    <h5>OLYMPIA NATION Steznici Za Kolena</h5>
+                    <p class="price" data-price="11">Price: $11</p>
+                    <button class="btn btn-primary button1" onclick="addToCart(11, 'OLYMPIA NATION Steznici Za Kolena', 'N/A', 'slike/Steznici1.jpg')">Add to Cart</button>
+                    <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4 proizvod" data-category="equipment">
+                <div class="supplement-item">
+                    <img src="slike/Rukavice1.jpg" class="img-fluid" alt="Supplement 9">
+                    <h5>OLYMPIA NATION Fitness Rukavice</h5>
+                    <p class="price" data-price="12">Price: $12</p>
+                    <button class="btn btn-primary button1" onclick="addToCart(12, 'OLYMPIA NATION Fitness Rukavice', 'N/A', 'slike/Rukavice1.jpg')">Add to Cart</button>
+                    <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="supplements.js"></script>
+    <script>
+    
+        $(document).ready(function () {
+            // Postavi event handler za klik na kategorije u dropdown-u
+            $('.dropdown-item').on('click', function () {
+                // Sakrij sve proizvode
+                $('.proizvod').hide();
+                
+                // Prikazi proizvode samo za izabranu kategoriju
+                var selectedCategory = $(this).data('category');
+                if (selectedCategory === 'all') {
+                    $('.proizvod').show();
+                } else {
+                    $('.proizvod[data-category="' + selectedCategory + '"]').show();
+                }
+            });
+
+            // Postavi event handler za unos teksta u polje za pretragu
+            $('#searchInput').on('input', function () {
+                var searchText = $(this).val().toLowerCase();
+                $('.proizvod').hide();
+                $('.proizvod:contains("' + searchText + '")').show();
+            });
+        });
+       
+        // Postavi event handler za klik na dugme sa klasom "lupa"
+    $('.lupa').on('click', function () {
+        // Otvori modal
+        $('#myModal').modal('show');
+        
+        // Dobavi podatke o proizvodu
+        var supplementName = $(this).closest('.supplement-item').find('h5').text();
+        var supplementImage = $(this).closest('.supplement-item').find('img').attr('src');
+        var supplementManufacturer = "Proizvođač"; // Dodajte stvarne informacije o proizvođaču
+        var supplementPrice = $(this).closest('.supplement-item').find('.price').data('price');
+
+        // Ažurirajte sadržaj modala sa podacima o proizvodu
+        $('#modalSupplementImage').attr('src', supplementImage);
+        $('#modalSupplementName').text(supplementName);
+        $('#modalManufacturer').text(supplementManufacturer);
+        $('#modalPrice').text(supplementPrice.toFixed(2)); // Prikazujemo cenu sa dve decimale
+
+        // Postavi event handler za dugme "Dodaj u korpu" u modalu
+            $('#addToCartModal').off('click').on('click', function () {
+                var quantity = $('#quantity').val();
+                 addToCart(supplementPrice * quantity, supplementName, supplementManufacturer, supplementImage);
+                // Zatvori modal
+                 $('#myModal').modal('hide');
+                 // Preusmeri na stranicu sa suplementima
+                    window.location.href = 'supplements.html'; // Promenite putanju prema potrebi
+            });
+            });
+
+
+
+        
+    </script>
+</body>
+</html>

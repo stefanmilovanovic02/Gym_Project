@@ -1,0 +1,72 @@
+body {
+    min-height: 100vh;
+    background-image: url(slike/Background.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.exercise-card {
+    max-width: 400px;
+    margin: 250px auto;
+}
+
+#routineList {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.routine-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.routine-item h5 {
+    margin: 0;
+}
+
+.routine-item h5 a {
+    color: #ffffff;  
+    text-decoration: none; 
+}
+
+.routine-item h5 a:hover {
+    text-decoration: underline;  /* Dodaje underline na hover efektu */
+}
+
+.navbar {
+    background-color: transparent !important;
+    padding: 10px;
+}
+
+.navbar-brand img {
+    max-height: 40px;
+    margin-right: 600px;
+}
+
+.nav-link {
+    font-size: large;
+    margin-left: 20px;
+}
+
+.button1 {
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 100px;
+    padding: 10px 30px;
+}
+
+.deleteRoutine {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto; /* Postavlja da bude pri kraju */
+}

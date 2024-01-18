@@ -1,0 +1,86 @@
+body {
+    min-height: 100vh;
+    background-image: url(slike/Background.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.navbar {
+    background-color: transparent !important;
+    padding: 10px;
+}
+
+.navbar-brand img {
+    max-height: 40px;
+    margin-right: 600px; 
+}
+
+.nav-link {
+    font-size: large;
+    margin-left: 20px; 
+}
+
+.card-body {
+    max-width: 400px;
+    height: 300px; 
+}
+
+.card {
+    margin-top: 200px;
+    margin-bottom: 20px; 
+}
+
+.progress-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #525151;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.progress-circle::before {
+    content: '';
+    position: absolute;
+    top: 6px; 
+    left: 6px;
+    right: 6px;
+    bottom: 6px; 
+    background-color: #212529;
+    border-radius: 50%;
+}
+
+.progress-circle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+}
+
+.food-entered .progress-circle::before {
+    background-color: #28a745; /* Zelena boja (primer) */
+}
+
+.food-entered .progress-circle-text::before {
+    content: '2500'; /* Broj kalorija (primer) */
+}
+
+#secondCardContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.circle-container {
+    order: 1; /* Postavljanje redosleda na 1 za circle-container */
+}
+
+.text-container {
+    order: 2; /* Postavljanje redosleda na 2 za text-container */
+}

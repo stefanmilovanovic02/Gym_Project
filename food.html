@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berserk Gym - Food</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="food.css">
+    <script src="jquery.js"></script>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand mr-auto" href="#">
+            <img src="slike/logo1.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-link" href="app.html">Home</a>
+                <a class="nav-link" href="supplements.html">Supplements</a>
+                <a class="nav-link" href="food.html">Food</a>
+                <a class="nav-link" href="Exercise.html">Exercise</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        <div class="card food-card bg-dark text-white">
+            <div class="card-header">
+                <h5 class="card-title text-center" id="foodTitle">Food</h5>
+            </div>
+            <div class="card-body" id="foodDetails">
+                <!-- Dodato dugme i kalendarski izbor -->
+                <div class="form-group">
+                    <label for="datePicker">Select Date:</label>
+                    <input type="date" class="form-control" id="datePicker">
+                </div>
+                <!-- Prikaz podataka o preostalim kalorijama -->
+                <div id="caloriesRemaining">
+                    <p>Calories Remaining: <span id="remainingValue"></span></p>
+                </div>
+
+                <!-- Layout za svaki obrok -->
+                <div class="meal-layout" id="breakfast">
+                    <h6>Breakfast</h6>
+                    <li>
+                        <ul>Banana</ul>
+                        <ul>Apple</ul>
+                        <ol>Strawberry</ol>
+                    </li>
+                    <button type="button" class="btn btn-primary button2" onclick="addFood('breakfast')">ADD FOOD</button>
+                </div>
+
+                <div class="meal-layout" id="lunch">
+                    <h6>Lunch</h6>
+                    <button type="button" class="btn btn-primary button2" onclick="addFood('lunch')">ADD FOOD</button>
+                </div>
+
+                <div class="meal-layout" id="dinner">
+                    <h6>Dinner</h6>
+                    <button type="button" class="btn btn-primary button2" onclick="addFood('dinner')">ADD FOOD</button>
+                </div>
+
+                <div class="meal-layout" id="snacks">
+                    <h6>Snacks</h6>
+                    <button type="button" class="btn btn-primary button2" onclick="addFood('snacks')">ADD FOOD</button>
+                </div>
+
+
+                <div class="meal-layout">
+                    <h6>Water</h6>
+                    <input type="number" class="form-control" id="waterInput">
+                </div>
+
+                <div class="meal-layout">
+                    <h6>Creatine</h6>
+                    <input type="number" class="form-control" id="creatineInput">
+                </div>
+            </div>
+            <!-- Dugme koje vodi na stranicu -->
+            <button type="button" class="btn btn-primary button1" onclick="redirectToAddPage()">Save Changes</button>
+        </div>
+    </div>
+
+    <script>
+        function redirectToAddPage() {
+            window.location.href = "App.html";
+        }
+    
+        function addFood() {
+            window.location.href = "addfood.html";
+        }
+
+    </script>
+
+    
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="food.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+body {
+    min-height: 100vh;
+    background-image: url(slike/Background.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.routine-card {
+    max-width: 1000px;
+    margin: 50px auto;
+    margin-right: -120px;
+}
+    
+.routine-card-right {
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+
+.navbar {
+    background-color: transparent !important;
+    padding: 10px;
+}
+
+.navbar-brand img {
+    max-height: 40px;
+    margin-right: 600px; 
+}
+
+.nav-link {
+    font-size: large;
+    margin-left: 20px; 
+    
+}
+
+.suplementi {
+    margin-top: 50px;
+}
+
+.exercise-item {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    height: 100%; 
+}
+
+.dugme {
+    background-color: white;
+    color: black;
+}
+
+.proizvod {
+    color: black;
+}
+
+.button1 {
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px; 
+    padding-right: 30px;
+}
+
+.button1:hover {
+    background-color: #535b63;
+    border-color: #ffffff;
+}
+
+.button2 {
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 390px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px; 
+    padding-right: 30px;
+}
+
+.button2:hover {
+    background-color: #535b63;
+    border-color: #ffffff;
+}
+
+.lupa {
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px; 
+    padding-right: 30px;
+}
+
+.lupa:hover {
+    background-color: #535b63;
+    border-color: #ffffff;
+}
+
+p{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.tabla{
+    margin-top: 10px;
+}
+
+.searchInput{
+    padding: 20px;
+}
+
+.ime{
+    color: black;
+}
+.dropdown{
+    color: rgb(17, 13, 13);
+    background-color: white;
+    border-radius: 10px;
+    padding: 7px;
+     
+}
+
+
+
+#myModal{
+    margin-top: 27vh;
+}
+
+
+#routineName {
+    background-color: #fff; /* Boja pozadine za form kontrolu */
+    color: #000; /* Boja teksta za form kontrolu */
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 60px;
+    max-width: 250px;
+}
+
+.button3 {
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 105px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px; 
+    padding-right: 30px;
+}
+
+.button3.exercise-item {
+    background-color: #535b63;
+    border-color: #ffffff;
+}

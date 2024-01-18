@@ -1,0 +1,53 @@
+body {
+    min-height: 100vh;
+    background-image: url(slike/Background.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+
+.navbar {
+    background-color: transparent !important;
+    padding: 10px;
+ 
+}
+
+.navbar-brand img {
+    max-height: 40px;
+    margin-right: 250px; 
+}
+
+
+.nav-link {
+    font-size: large;
+    margin-left: 20px; 
+}
+.naslov{
+    color: white;
+    margin-top: 30vh;
+}
+
+.button1{
+    
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px; 
+    padding-right: 30px;
+}
+
+.button1:hover {
+    background-color: #535b63;
+    border-color: #ffffff;
+}
+
+.modal-content{
+    background-color: transparent !important;   
+    border: transparent;
+    margin-top: 220px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="goal.css">
+</head>
+<body>
+
+<div class="card goal-card bg-dark text-white">
+    <div class="card-header">
+        <h5 class="card-title text-center">Goal</h5>
+        <div class="progress">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Step 2</div>
+        </div>
+    </div>
+    <div class="card-body">
+        <form id="goalForm" method="post" action="php/goal.php">
+            <div class="form-check custom-checkbox">
+                <input class="form-check-input" type="radio" name="goalOption" id="goalOption1" onchange="checkNextButton()" value="Gain weight">
+                <label class="form-check-label" for="goalOption1">
+                    Gain weight
+                </label>
+            </div>
+            <div class="form-check custom-checkbox">
+                <input class="form-check-input" type="radio" name="goalOption" id="goalOption2" onchange="checkNextButton()" value="Maintain weight">
+                <label class="form-check-label" for="goalOption2">
+                    Maintain weight
+                </label>
+            </div>
+            <div class="form-check custom-checkbox">
+                <input class="form-check-input" type="radio" name="goalOption" id="goalOption3" onchange="checkNextButton()" value="Lose weight">
+                <label class="form-check-label" for="goalOption3">
+                    Lose weight
+                </label>
+            </div>
+
+            <!-- Dugme "Next" koje vodi na sledeću stranicu -->
+            <button type="button" class="btn btn-primary button1" id="nextButton" onclick="redirectToNextQuestion()" disabled>Next</button>
+
+            <script>
+                // Funkcija koja proverava da li je izabran barem jedan radio button
+                function checkNextButton() {
+                    var goalOption1 = document.getElementById('goalOption1').checked;
+                    var goalOption2 = document.getElementById('goalOption2').checked;
+                    var goalOption3 = document.getElementById('goalOption3').checked;
+
+                    // Onemogućava dugme "Next" ako nijedan radio button nije izabran
+                    document.getElementById('nextButton').disabled = !(goalOption1 || goalOption2 || goalOption3);
+                }
+
+                function redirectToNextQuestion() {
+                    var selectedGoal;
+
+                    // proveri koji je radio button cekiran
+                    if (document.getElementById('goalOption1').checked) {
+                         selectedGoal = document.getElementById('goalOption1').value;
+                    } else if (document.getElementById('goalOption2').checked) {
+                        selectedGoal = document.getElementById('goalOption2').value;
+                    } else if (document.getElementById('goalOption3').checked) {
+                        selectedGoal = document.getElementById('goalOption3').value;
+                    }
+
+                    // sacuvaj izabrani goal u localStorage
+                    localStorage.setItem('Goal', selectedGoal);
+
+                    // Update proggres bar
+                    var progressBar = document.querySelector('.progress-bar');
+                    progressBar.style.width = '75%';
+
+                    window.location.href = "activity.html";
+                }
+            </script>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

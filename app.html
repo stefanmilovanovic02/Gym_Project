@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berserk Gym</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/css/pikaday.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+    
+    
+
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand mr-auto" href="#">
+            <img src="slike/logo1.png" alt="Logo">
+        </a>
+        <div class="navbar-nav ml-auto">
+            <a class="nav-link" href="app.html">Home</a>
+            <a class="nav-link" href="supplements.html">Supplements</a>
+            <a class="nav-link" href="food.html">Food</a>
+            <a class="nav-link" href="Exercise.html">Exercise</a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white">
+                    <div class="card-body" id="firstCardContent">
+                        <div class="date-picker-container mt-3">
+                            <div class="form-group">
+                                <label for="datePicker">Select Date:</label>
+                                <input type="date" class="form-control" id="datePicker">
+                            </div>
+                        </div>
+                        <div class="chart-container mt-3">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white">
+                    <div class="card-body" id="secondCardContent">
+                        <div class="circle-container">
+                            <div class="progress-circle" id="progressCircle">
+                                <div class="progress-circle-text" id="progressCircleText"></div>
+                            </div>
+                        </div>
+                        <div class="text-container text-right mt-3">
+                            <h5 class="card-title" id="foodTitle">Food</h5>
+                            <p class="card-text">258 cal</p>
+                            <p class="card-text">Water 2L</p>
+                            <p class="card-text">Creatine 5g</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white">
+                    <div class="card-body" id="thirdCardContent">
+                        <div class="date-picker-container mt-3">
+                            <div class="form-group">
+                                <label for="datePickerThird">Select Date:</label>
+                                <input type="date" class="form-control" id="datePickerThird">
+                            </div>
+                        </div>
+                        <div class="chart-container mt-3">
+                            <canvas id="myChartThird"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday@1.8.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="app.js"></script>
+
+    <script>
+        function redirectToNextQuestion() {
+            window.location.href = 'app.html';
+        }
+    </script>
+</body>
+</html>

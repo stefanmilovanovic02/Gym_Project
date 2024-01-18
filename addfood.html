@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berserk Gym - Exercise</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="addExercise.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand mr-auto" href="#">
+            <img src="slike/logo1.png" alt="Logo">
+        </a>
+        <div class="navbar-nav ml-auto">
+            <a class="nav-link" href="app.html">Home</a>
+            <a class="nav-link" href="supplements.html">Supplements</a>
+            <a class="nav-link" href="food.html">Food</a>
+            <a class="nav-link" href="Exercise.html">Exercise</a>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Glavni card-body (sa vezbama) -->
+            <div class="col-md-8">
+                <div class="card routine-card bg-dark text-white">
+                    <div class="card-header">
+                        <h5 class="card-title text-center">Food</h5>
+                    </div>
+                    <div class="card-body">
+            <div class="container mt-4">
+                <!-- Search bar -->
+                <div id="searchDropdownContainer" class="row mb-3">
+                    <div class="col-md-10">
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search food...">
+                    </div>
+        
+                     <!-- Dropdown  bar -->
+                    <div class="col-md-2">
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle show" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true"><span class="ime">Categories</span></a>
+                            <div class="dropdown-menu" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 44px);" data-popper-placement="bottom-start">
+                                <a class="dropdown-item" href="#" data-category="all">All</a>
+                                <a class="dropdown-item" href="#" data-category="fruit">Fruit</a>
+                                <a class="dropdown-item" href="#" data-category="vegetables">Vegetables</a>
+                                <a class="dropdown-item" href="#" data-category="Meat">Meat</a>
+                                <a class="dropdown-item" href="#" data-category="snacks">Snacks</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                      
+                <div class="row tabla">
+                    <!-- Grid sa vezbama -->
+                    <div class="col-md-4 mb-4 proizvod" data-category="fruit">
+                        <div class="exercise-item">
+                            <img src="slike/banana.jpg" class="img-fluid" alt="Banana">
+                            <h5>Banana</h5>
+                            <p class="description">110 calories, 0 gram fat, 1 gram protein, 28 grams carbohydrate, 15 grams sugar</p>
+                            <button class="btn btn-primary button1">Add food</button>
+                            <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                        </div>
+                        <!-- Modal -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <!-- Slika vezbe -->
+                                            <img src="" class="img-fluid" alt="Exercise Image" id="modalExerciseImage">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <!-- Informacije o proizvodu -->
+                                            <h5 id="modalExerciseName"></h5>
+                    
+                                            <button class="btn btn-primary button1">Add exercise</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                    <div class="col-md-4 mb-4 proizvod" data-category="fruit">
+                        <div class="exercise-item">
+                            <img src="slike/apple.jpg" class="img-fluid" alt="Apple">
+                            <h5>Apple</h5>
+                            <p class="description"> 95 calories, 0 gram fat, 1 gram protein, 25 grams carbohydrate, 19 grams sugar</p>
+                            <button class="btn btn-primary button1">Add food</button>
+                            <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4 mb-4 proizvod" data-category="fruit">
+                        <div class="exercise-item">
+                            <img src="slike/strawberry.jpg" class="img-fluid" alt="Strawberry">
+                            <h5>Strawberry</h5>
+                            <p class="description">calories: 53 calories. protein: 1.11 g.</p>
+                            <button class="btn btn-primary button1">Add food</button>
+                            <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4 mb-4 proizvod" data-category="vegetables">
+                        <div class="exercise-item">
+                            <img src="slike/Lettuce.jpg" class="img-fluid" alt="Lettuce">
+                            <h5>Lettuce</h5>
+                            <p class="description"> Calories: 10. Protein: 1 gram.</p>
+                            <button class="btn btn-primary button1">Add food</button>
+                            <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4 mb-4 proizvod" data-category="vegetables">
+                        <div class="exercise-item">
+                            <img src="slike/cucumber.jpg" class="img-fluid" alt="Cucumber">
+                            <h5>Cucumber</h5>
+                            <p class="description">Calories: 8. Protein: 0.3 gram.</p>
+                            <button class="btn btn-primary button1">Add food</button>
+                            <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4 mb-4 proizvod" data-category="vegetables">
+                        <div class="exercise-item">
+                            <img src="slike/carrot.jpg" class="img-fluid" alt="Carrot">
+                            <h5>Carrot</h5>
+                            <p class="description">Protein 1.13g. Energy (kcal)	50.02</p>
+                            <button class="btn btn-primary button1">Add food</button>
+                            <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4 mb-4 proizvod" data-category="Meat">
+                        <div class="exercise-item">
+                            <img src="slike/Steak.jpg" class="img-fluid" alt="Steak">
+                            <h5>Steak</h5>
+                            <p class="description">250 calories, 35 grams of protein, and 10 grams of fat</p>
+                            <button class="btn btn-primary button1">Add food</button>
+                            <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4 mb-4 proizvod" data-category="Meat">
+                        <div class="exercise-item">
+                            <img src="slike/Chicken Breast.jpg" class="img-fluid" alt="Chicken Breast">
+                            <h5>Chicken Breast</h5>
+                            <p class="description">165 calories, 31 g of protein, and 3.6 g of fat</p>
+                            <button class="btn btn-primary button1">Add food</button>
+                            <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4 mb-4 proizvod" data-category="Meat">
+                        <div class="exercise-item">
+                            <img src="slike/cevapi.jpg" class="img-fluid" alt="Cevapi">
+                            <h5>Cevapi</h5>
+                            <p class="description">267 calories, 24 g of protein, and 17.4 g of fat</p>
+                            <button class="btn btn-primary button1">Add food</button>
+                            <button class="btn btn-primary lupa"><img src="slike/lupa.png" alt="lupa" height="20px" width="20px"></button>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    
+     <!-- Drugi card-body (desna strana) -->
+     <div class="col-md-4">
+        <div class="card routine-card-right bg-dark text-white">
+            <div class="card-header">
+                <h5 class="card-title text-center">Selected Foods</h5>
+            </div>
+            <div class="card-body">
+
+                <ul id="selectedExercisesList">
+                    <!-- Ovde će se dinamički dodavati izabrane vežbe -->
+                </ul>
+
+                <!-- Dugme koje vodi na stranicu za dodavanje vezbi -->
+            <button type="button" class="btn btn-primary button3" onclick="redirectToAddPage()">Log food</button>
+
+                <script>
+        
+                function redirectToAddPage() {
+                    window.location.href = "food.html";
+                }
+            </script>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+    <script src="jquery.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="addfood.js"></script>
+    <script>
+    
+        $(document).ready(function () {
+            // Postavi event handler za klik na kategorije u dropdown-u
+            $('.dropdown-item').on('click', function () {
+                // Sakrij sve proizvode
+                $('.proizvod').hide();
+                
+                // Prikazi proizvode samo za izabranu kategoriju
+                var selectedCategory = $(this).data('category');
+                if (selectedCategory === 'all') {
+                    $('.proizvod').show();
+                } else {
+                    $('.proizvod[data-category="' + selectedCategory + '"]').show();
+                }
+            });
+
+            // Postavi event handler za unos teksta u polje za pretragu
+            $('#searchInput').on('input', function () {
+                var searchText = $(this).val().toLowerCase();
+                $('.proizvod').hide();
+                $('.proizvod:contains("' + searchText + '")').show();
+            });
+        });
+       
+    
+    </script>
+</body>
+</html>

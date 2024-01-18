@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berserk Gym</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand mr-auto" href="#">
+            <img src="slike/logo1.png" alt="Logo">
+        </a>
+        <div class="navbar-nav ml-auto">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Home</a>
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Supplements</a>
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Food</a>
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Exercise</a>
+        </div>
+    </nav>
+
+    <div class="container naslov">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Build your perfect body</h1>
+                <p>With our program you can track your food intake, calories, and see your weight improvement</p>
+                <button class="btn btn-primary button1" data-bs-toggle="modal" data-bs-target="#loginModal">Start now</button>
+
+                <div class="modal" id="loginModal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="card login-card bg-dark text-white">
+                                    <div class="card-header">
+                                        <h5 class="card-title text-center">Login</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="username">Username</label>
+                                                <input type="text" class="form-control" id="username" placeholder="Enter your username:">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="password">Password</label>
+                                                <input type="password" class="form-control" id="password" placeholder="Enter your password:">
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                                <label class="form-check-label" for="rememberMe">Remember me?</label>
+                                            </div>
+                                            <button type="button" class="btn btn-primary btn-block mt-3 button1">Login</button>
+                                            <p class="mt-3 text-center">Don't have an account? <a href="register.html">Sign in</a></p>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+   <script src="script.js"></script>
+   <script src="js/bootstrap.bundle.js"></script>
+
+</body>
+</html>

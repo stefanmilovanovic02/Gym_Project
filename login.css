@@ -1,0 +1,22 @@
+body {
+    background-color: #7E7E7E;
+}
+
+.login-card {
+    max-width: 400px;
+    margin: 250px auto;
+}
+
+
+.button1{
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 125px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px; 
+    padding-right: 30px;
+    
+}
